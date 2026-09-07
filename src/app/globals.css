@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ---------- Fonts (self-hosted, SIL OFL) ---------- */
+/* Noto Rashi Hebrew — the authentic Rashi-script glyphs (Google/Noto, OFL). */
+@font-face {
+  font-family: "Noto Rashi Hebrew";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/noto-rashi-hebrew-hebrew-400-normal.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: "Noto Rashi Hebrew";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/noto-rashi-hebrew-hebrew-600-normal.woff2") format("woff2");
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* Heebo — UI text */
+@font-face { font-family: "Heebo"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/heebo-hebrew-400-normal.woff2") format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Heebo"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/heebo-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Heebo"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/heebo-hebrew-500-normal.woff2") format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Heebo"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/heebo-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Heebo"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/heebo-hebrew-700-normal.woff2") format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Heebo"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/heebo-latin-700-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* Frank Ruhl Libre — headings (a Hebrew serif that echoes the world of the printed page) */
+@font-face { font-family: "Frank Ruhl Libre"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/frank-ruhl-libre-hebrew-400-normal.woff2") format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Frank Ruhl Libre"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/frank-ruhl-libre-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Frank Ruhl Libre"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/frank-ruhl-libre-hebrew-500-normal.woff2") format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Frank Ruhl Libre"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/frank-ruhl-libre-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Frank Ruhl Libre"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/frank-ruhl-libre-hebrew-700-normal.woff2") format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Frank Ruhl Libre"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/frank-ruhl-libre-latin-700-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* ---------- Design tokens ---------- */
+@theme {
+  /* palette: cream page, charcoal ink, deep ink-brown, restrained ochre, a touch of sage and deep blue */
+  --color-cream: #f5f0e6;
+  --color-cream-deep: #ede6d7;
+  --color-paper: #fbf8f2;
+  --color-ink: #2a2420;
+  --color-ink-soft: #5d544c;
+  --color-ink-mute: #8a8178;
+  --color-sepia: #6b4a2b;
+  --color-ochre: #b8903f;
+  --color-ochre-soft: #e9dbb8;
+  --color-ochre-tint: #f5ecd6;
+  --color-sage: #6f8a72;
+  --color-sage-tint: #e6ede4;
+  --color-indigo: #2f3b5c;
+  --color-indigo-tint: #e2e6f0;
+  --color-line: #e2d9c6;
+  --color-rose-tint: #f3e4dc;
+
+  --font-ui: "Heebo", "Segoe UI", Arial, sans-serif;
+  --font-display: "Frank Ruhl Libre", "Times New Roman", serif;
+  --font-rashi: "Noto Rashi Hebrew", serif;
+
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 6px 24px rgba(42, 36, 32, 0.08);
+  --shadow-lift: 0 14px 40px rgba(42, 36, 32, 0.12);
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-fade-in: fade-in 0.4s ease-out both;
+  --animate-settle: settle 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-glow: glow 1.4s ease-out both;
+  --animate-nudge: nudge 0.5s ease-in-out both;
+  --animate-breathe: breathe 2.8s ease-in-out infinite;
+  --animate-drift: drift 1.6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes settle {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes glow {
+    0% { box-shadow: 0 0 0 0 rgba(184, 144, 63, 0.55); }
+    100% { box-shadow: 0 0 0 26px rgba(184, 144, 63, 0); }
+  }
+  @keyframes nudge {
+    0%, 100% { transform: translateX(0); }
+    30% { transform: translateX(-4px); }
+    60% { transform: translateX(4px); }
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.04); opacity: 1; }
+  }
+  @keyframes drift {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 1; }
+  }
+}
+
+/* ---------- Base ---------- */
+html {
+  direction: rtl;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(184, 144, 63, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 10% 110%, rgba(111, 138, 114, 0.08), transparent 60%),
+    var(--color-cream);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.font-rashi {
+  font-family: var(--font-rashi);
+  font-feature-settings: "kern" 1;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Focus: visible, warm, never relying on color alone */
+:focus-visible {
+  outline: 3px solid var(--color-ochre);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+button, [role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Projection typography scale */
+.projection {
+  --proj-scale: clamp(1.4rem, 2.6vw, 3.2rem);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thin, quiet scrollbars in the facilitator panel */
+.quiet-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
